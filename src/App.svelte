@@ -1,6 +1,8 @@
 <script>
 	import Modal from './Modal.svelte';
 
+	let showModal = false;
+
 	let people = [
 		{ name: 'ms sheila', subtitle: 'code composer', age:44, id: 1 },
 		{ name: 'holly', subtitle: 'teen trouble', age:14, id: 2 },
@@ -14,10 +16,15 @@
 
 	let signedIn = 'Who are you?';
 
+	const toggleModal = () => {
+		showModal = !showModal;
+	}
+
 </script>
 
-<Modal />
+<Modal message="You did it!" isCongrats={true} {showModal} on:click={toggleModal}/>
 <main>
+	<button on:click|once={toggleModal}>Positive message</button>
 	<input type="text" bind:value={signedIn}>
 
 	{#if signedIn=='Sheila'}
