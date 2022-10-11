@@ -1,5 +1,6 @@
 <script>
 	import Modal from './Modal.svelte';
+	import Header from './Header.svelte';
 
 	let showModal = false;
 
@@ -24,6 +25,7 @@
 
 <Modal message="You did it!" isCongrats={true} {showModal} on:click={toggleModal}/>
 <main>
+	<Header />
 	<button on:click|once={toggleModal}>Positive message</button>
 	<input type="text" bind:value={signedIn}>
 
