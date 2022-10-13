@@ -5,7 +5,8 @@ html, body {
 }
 
 body {
-	color: #333;
+	text-align: center;
+	color: #513F55;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -63,17 +64,29 @@ button:focus {
 }
 
 body {
-	color: #777;
-	background: #eee;
+	color: #513F55;
+	background: #E5CCBF;
 	padding: 0;
 	margin: 0;
 }
 
 h4 {
-	color: orangered;
+	color: #513F55;
 }
 
 button {
 	background: white;
 }
 
+
+/* colors
+#595354
+#9F7178
+#E5CCBF
+#766273
+#513F55
+#6ea4bf
+#73fbd3
+#e6c79c
+#c68866
+ */

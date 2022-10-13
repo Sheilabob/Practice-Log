@@ -37,34 +37,38 @@
 	<button on:click|once={toggleModal}>Positive message</button>
 	<input type="text" bind:value={signedIn}>
 
-	{#if signedIn=='Sheila'}
-		{#each people as person (person.id)}
-		<div>
-			<h4>{person.name}</h4>
-			<p>{person.subtitle}, {person.age} years old</p>
-			<button on:click={() => deletePerson(person.id)}>delete</button>
-		</div>
-		{:else}
-		<p>There are no people to show . . .</p>
-
-		{/each}
-	{:else if signedIn=='student'}
-		{#each people as person (person.id)}
-		<div>
-			<h4>{person.name}</h4>
-			<p>{person.subtitle}, {person.age} years old</p>
-		</div>
-
-		{:else}
-		<p>There are no people to show . . .</p>
-		{/each}
-
-	{/if}
 	<Tabs {activeTab} {tabs} on:tabChange={tabChange} />
 	{#if activeTab === 'Actions'}
-		<p>Teacher Actions go here</p>
+		{#if signedIn=='Sheila'}
+			<p>Teacher Actions go here</p>
+		{:else}
+			<p>Please sign in to access</p>
+		{/if}
 	{:else if activeTab === 'Student Cards'}
-		<p>Student Cards go here</p>
+		{#if signedIn=='Sheila'}
+			{#each people as person (person.id)}
+			<div>
+				<h4>{person.name}</h4>
+				<p>{person.subtitle}, {person.age} years old</p>
+				<button on:click={() => deletePerson(person.id)}>delete</button>
+			</div>
+			{:else}
+			<p>There are no people to show . . .</p>
+
+			{/each}
+		{:else if signedIn=='student'}
+			{#each people as person (person.id)}
+			<div>
+				<h4>{person.name}</h4>
+				<p>{person.subtitle}, {person.age} years old</p>
+			</div>
+
+			{:else}
+			<p>There are no people to show . . .</p>
+			{/each}
+		{:else}
+			<p>Student Cards go here</p>
+		{/if}
 	{/if}
 
 </main>

@@ -2,7 +2,7 @@
 
 </script>
 <div>
-<h1>HEADER</h1>
+<h1>Music Practice Log</h1>
 </div>
 <style>
 

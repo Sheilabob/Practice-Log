@@ -2,7 +2,7 @@
 
 </script>
 <div>
-<h1>FOOTER</h1>
+<h1>by Desert Child Music</h1>
 </div>
 <style>
 

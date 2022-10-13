@@ -16,6 +16,18 @@
         {/each}
     </ul>
 
+    <!-- /* colors
+#595354
+#9F7178
+#E5CCBF
+#766273
+#513F55
+#6ea4bf
+#73fbd3
+#e6c79c
+#c68866
+#087ca7
+ */ -->
 </div>
 
 <style>
@@ -31,12 +43,12 @@
     li {
         margin: 0 16px;
         font-size: 18px;
-        color: #555;
+        color: #b18fcf;
         cursor: pointer;
     }
     .active {
-        color: #d91b42;
-        border-bottom: 2px solid #d91b42;
-        padding-borrom: 8px;
+        color: #087ca7;
+        border-bottom: 2px solid #087ca7;
+        padding-bottom: 8px;
     }
 </style>
